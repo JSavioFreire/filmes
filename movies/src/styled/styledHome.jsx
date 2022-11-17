@@ -5,7 +5,14 @@ export const Flex = styled.section`
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
 `
 
 export const EachMovie = styled.div`
@@ -13,7 +20,7 @@ export const EachMovie = styled.div`
         return theme.colors.primary
     }};
     width: 250px;
-    height: 380px;
+    height: 420px;
     margin: 10px;
     display: flex;
     justify-content: center;

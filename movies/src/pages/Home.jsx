@@ -1,24 +1,29 @@
 import { useFetch } from '../hook/useFetch'
-import { movies, key } from '../url/url'
+import { movies, keyapi } from '../url/url'
 import Image from '../components/imageMovie'
 import { EachMovie,Flex } from '../styled/styledHome'
+import { Link } from 'react-router-dom'
+import { FaStar } from 'react-icons/fa';
+
 
 
 const Home = () => {
-    const topRated = `${movies}top_rated?${key}` 
+    const topRated = `${movies}top_rated?${keyapi}` 
     const {data,error,loading} = useFetch(topRated)
 
-
-    data && console.log(data.results)
   return (
     <Flex>
         {error && 'Ocorreu um erro!'}
         {loading && 'Carregando'}
         {data && data.results.map((movie) =>(
-            <EachMovie>
-                <h2>{movie.title}</h2>
-                <Image poster={movie.poster_path}/>
+          <Link to={`/tvandmovie/${movie.id}`}>
+            <EachMovie key={movie.id}>
+                  <h2>{movie.title}</h2>
+                  <Image poster={movie.poster_path}/>
+                  <p><FaStar/>{movie.vote_average}</p>
             </EachMovie >
+          </Link>
+           
 
         ))}
         
