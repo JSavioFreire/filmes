@@ -26,7 +26,6 @@ function App() {
           <Route path='/tvandmovie/:id' element={<Dynamics/>}/>
           <Route path='/tvandmovies/:id' element={<DynamicsSeries/>}/>
           <Route path='/search' element={<SeachPage/>}/>
-
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

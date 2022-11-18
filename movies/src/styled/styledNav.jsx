@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const Navbar = styled.nav`
     width: 100%;
-    height: 60px;
     background-color: black;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-size: 20px;
+    flex-wrap: wrap;
+    padding: 10px 0;
     a{
         color: white;
         text-decoration: none;
@@ -20,6 +21,9 @@ export const Navbar = styled.nav`
         }};
         border: 0.1px solid white;
     }
+    @media screen and (max-width: 768px){    
+            font-size: 15px;
+    }
 `
 export const SearchHeader = styled.div`
     
@@ -31,7 +35,7 @@ export const SearchHeader = styled.div`
         border: 0;
         :focus{
         outline: 0;
-    }
+        }
     }
     
     .bt{
@@ -47,6 +51,17 @@ export const SearchHeader = styled.div`
             background-color: ${({theme})=>{
                 return theme.colors.darkPrimary
             }};
+        }
+    }
+    @media screen and (max-width: 768px){    
+        width: 100%;
+        text-align: center;
+        .search{
+            width: 70%;
+            margin-top: 10px;
+        }
+        .bt{
+            width: 15%;
         }
     }
     

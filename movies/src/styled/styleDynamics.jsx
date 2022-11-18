@@ -8,6 +8,7 @@ export const Dynamic = styled.section`
     justify-content: center;
     align-items: center;
     margin: 20px auto;
+    overflow-x: hidden;
 
     div{
         display: flex;
@@ -40,5 +41,17 @@ export const Dynamic = styled.section`
     }
     img{
         margin: 0 5px;
+    }
+    @media screen and (max-width: 768px){    
+        margin-top: 0;
+        section{
+            flex-direction: column;
+        }
+        p{
+            margin-top: 0px;
+            width: 90%;
+            text-align: center;
+        }
+        
     }
 `

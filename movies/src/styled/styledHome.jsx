@@ -8,7 +8,6 @@ export const Flex = styled.section`
     justify-content: space-between;
     width: 90%;
     margin: 0 auto;
-
     a{
         text-decoration: none;
         color: white;
@@ -18,6 +17,10 @@ export const Flex = styled.section`
         color: white;
         text-align: center;
         font-size: 35px;
+    }
+    @media screen and (max-width: 768px){    
+        flex-direction: column;
+        justify-content: center ;
     }
 `
 
@@ -40,4 +43,10 @@ export const EachMovie = styled.div`
         font-weight: 400;
         width: 80%;
     }
+    @media screen and (max-width: 768px){    
+        width: 320px;
+        text-align: center;
+        
+    }
+    
 `

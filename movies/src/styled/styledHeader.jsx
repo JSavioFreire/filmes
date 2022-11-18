@@ -18,4 +18,10 @@ export const HeaderS = styled.header`
             return theme.fonts.primary
         }};
     }
+    @media screen and (max-width: 768px){
+        height: 40px;
+        h1{
+            font-size: 20px;
+        }
+    }
 `
