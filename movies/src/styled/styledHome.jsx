@@ -13,6 +13,12 @@ export const Flex = styled.section`
         text-decoration: none;
         color: white;
     }
+    h1{
+        width: 100%;
+        color: white;
+        text-align: center;
+        font-size: 35px;
+    }
 `
 
 export const EachMovie = styled.div`
