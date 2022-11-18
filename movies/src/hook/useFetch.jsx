@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const useFetch = (url) => {
-  referrerPolicy: "unsafe_url" 
+  
   const [data, setData] = useState(null);
 
   //post
